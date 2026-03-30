@@ -1,0 +1,13 @@
+{
+  "name": "apipilot",
+  "version": "1.0.0",
+  "description": "ApiPilot — Run frontend and backend together",
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "start": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"cyan,magenta\" \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "setup": "npm install && npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
